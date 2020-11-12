@@ -1,6 +1,6 @@
 dash==0.23.1
 dash-bootstrap-components
-dash-core-components
+dash-core-components==0.23.1
 dash-html-components
 dash-renderer
 dash-table
