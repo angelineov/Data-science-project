@@ -108,7 +108,6 @@ mock
 more-itertools
 mpmath
 msgpack
-multipledispatch
 navigator-updater
 nbconvert
 nbformat
