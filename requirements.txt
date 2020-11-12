@@ -1,13 +1,16 @@
 dash
 dash-bootstrap-components
+dash-canvas
 dash-core-components
+dash-daq
 dash-html-components
 dash-renderer
 dash-table
-dash.ly
 scikit-learn
 scipy
 numpy
 pandas
 gunicorn
 requests
+wordcloud
+wheel
