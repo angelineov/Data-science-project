@@ -13,6 +13,13 @@ configobj
 constantly
 cryptography
 cycler
+dash
+dash-bootstrap-components
+dash-core-components
+dash-html-components
+dash-renderer
+dash-table
+dash.ly
 dbus-python
 decorator
 defusedxml
@@ -80,9 +87,9 @@ pyOpenSSL==19.0.0
 pyparsing==2.4.7
 pyrsistent==0.15.5
 pyserial
-python-apt==2.0.0+ubuntu0.20.4.1
+python-apt
 python-dateutil==2.8.1
-python-debian===0.1.36ubuntu1
+python-debian
 pytz==2020.1
 PyYAML==5.3.1
 pyzmq==19.0.1
