@@ -179,7 +179,6 @@ QtPy
 requests
 retrying
 rope
-Rtree
 ruamel-yaml
 scikit-image
 scikit-learn
