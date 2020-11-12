@@ -1,4 +1,4 @@
-dash
+dash==0.23.1
 dash-bootstrap-components
 dash-core-components
 dash-html-components
