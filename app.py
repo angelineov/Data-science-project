@@ -155,22 +155,6 @@ app.layout = html.Div([
             dbc.Col(html.H6(id='output_container3', children=[]), className="mb-4")
         ]),
     
-    dcc.Dropdown(
-        id='ddcompanies',
-        options=[
-            {'label': 'Amazon',   'value': 'Amazon'},
-            {'label': 'Google',   'value': 'Google'},
-            {'label': 'IBM',      'value': 'IBM'},
-            {'label': 'Microsoft','value': 'Microsoft'},
-            {'label': 'NVIDIA',   'value': 'NVIDIA'},
-            {'label': 'Oracle',   'value': 'Oracle'}
-        ],
-        value='Amazon',
-        style={'width': '48%', 'margin-left':'5px'}
-        ),
-
-    dcc.Graph(id='companies_graph1',figure={}),
-    
     dcc.Input(
             id='searchinput',
             type="text",
@@ -264,30 +248,6 @@ def highlightedTopic(text):
         title_text="Highlighted Keywords",
         showlegend=False,)
     return container, fig
-
-@app.callback(
-    [Output(component_id='output_container3' , component_property='children'),
-     Output(component_id='companies_graph1' , component_property='figure')],    
-    Input(component_id='ddcompanies', component_property='value'))
-
-def update_graph3(option_slctd):
-    
-    container = "The company chosen by user is: {}".format(option_slctd)
-    
-    if option_slctd=='Amazon': dff = dfc1
-    elif option_slctd=='Google': dff = dfc2
-    elif option_slctd=='IBM': dff = dfc3
-    elif option_slctd=='Microsoft': dff = dfc4
-    elif option_slctd=='NVIDIA': dff = dfc5
-    elif option_slctd=='Oracle': dff = dfc6
-    
-    fig = px.bar(dff, x="Keyword", y="Frequency", color ='Frequency', barmode="group")
-    # Update remaining layout properties
-    fig.update_layout(
-        title_text="Highlighted Keywords",
-        showlegend=False,
-        )
-    return container, fig 
 
 
 if __name__ == '__main__':
