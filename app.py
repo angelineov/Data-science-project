@@ -26,7 +26,6 @@ import base64
 import plotly.express as px
 import collections
 import networkx as nx
-import matplotlib.pyplot as plt
 
 #import plotly.graph_objects as go
 
