@@ -7,9 +7,7 @@ dash-html-components
 dash-renderer
 dash-table
 scikit-learn
-TSNE
 scipy
-networkx
 numpy
 pandas
 gunicorn
