@@ -23,6 +23,7 @@ import pandas as pd
 from wordcloud import WordCloud
 import base64
 import plotly.express as px
+import collections
 #import plotly.graph_objects as go
 
 
@@ -35,6 +36,12 @@ print("Loading")
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.title = "Market Analysis - Data Science Project"
+
+#all data
+raw = pd.read_csv('ALL_DATA.csv', encoding='Latin-1')
+raw.pop("Singleton")
+raw.pop('Length')
+alldata = raw.replace(np.nan, '', regex=True)
 
 #all conferences data
 df = pd.read_csv("all_highlighted_conferences.csv")
@@ -161,8 +168,17 @@ app.layout = html.Div([
         value='Amazon',
         style={'width': '48%', 'margin-left':'5px'}
         ),
-    
 
+    dcc.Graph(id='companies_graph1',figure={}),
+    
+    dcc.Input(
+            id='searchinput',
+            type="text",
+            placeholder="write a company name here",
+            value='Amazon',
+            style={'width': '48%', 'margin-left':'5px'}
+            ),
+    
     dcc.Graph(id='companies_graph',figure={})
     
     ])
@@ -172,6 +188,7 @@ app.layout = html.Div([
 
 
 # page callbacks
+
 @app.callback(
     [Output(component_id='output_container2' , component_property='children'),
      Output(component_id='topics_graph' , component_property='figure')],    
@@ -222,7 +239,35 @@ def update_graph(option_slctd):
 
 @app.callback(
     [Output(component_id='output_container3' , component_property='children'),
-     Output(component_id='companies_graph' , component_property='figure')],    
+     Output(component_id='companies_graph' , component_property='figure')],
+    Input(component_id='searchinput', component_property='value'))
+
+def highlightedTopic(text):
+    
+    container = "The company chosen by user is: {}".format(text)
+
+   
+    filter = alldata[alldata['Inc'] == text]
+    train = list(filter.Keywords)
+    t = [item.split(',') for item in train]
+    flat_list = []
+    for sublist in t:
+        for item in sublist:
+            flat_list.append(item)
+    counter = collections.Counter(flat_list)
+    c= counter.most_common()
+    data = c[:10]
+    dataframe = pd.DataFrame(data, columns =['Keyword', 'Frequency'])
+    fig = px.bar(dataframe, x="Keyword", y="Frequency", color ='Frequency', barmode="group")
+    # Update remaining layout properties
+    fig.update_layout(
+        title_text="Highlighted Keywords",
+        showlegend=False,)
+    return container, fig
+
+@app.callback(
+    [Output(component_id='output_container3' , component_property='children'),
+     Output(component_id='companies_graph1' , component_property='figure')],    
     Input(component_id='ddcompanies', component_property='value'))
 
 def update_graph3(option_slctd):
@@ -242,9 +287,8 @@ def update_graph3(option_slctd):
         title_text="Highlighted Keywords",
         showlegend=False,
         )
-    return container, fig
+    return container, fig 
 
-server = app.server
+
 if __name__ == '__main__':
     app.run_server(host='127.0.0.1', debug=False)
-    
