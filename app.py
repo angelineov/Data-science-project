@@ -38,7 +38,7 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.title = "Market Analysis - Data Science Project"
 
 #all data
-raw = pd.read_csv('ALL_DATA.csv', encoding='Latin-1')
+raw = pd.read_csv('All_Data.csv', encoding='Latin-1')
 raw.pop("Singleton")
 raw.pop('Length')
 alldata = raw.replace(np.nan, '', regex=True)
