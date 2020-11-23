@@ -40,6 +40,8 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.title = "Market Analysis - Data Science Project"
 
+server = app.server
+
 #all data
 raw = pd.read_csv('ALL_DATA.csv', encoding='Latin-1')
 raw.pop("Singleton")
@@ -341,8 +343,6 @@ def CompSim_2(name):
                       yaxis={'showgrid': False, 'zeroline': False, 'showticklabels': False})
     
     return container, fig
-
-server = app.server
 
 if __name__ == '__main__':
     app.run_server(host='127.0.0.1', debug=False)
