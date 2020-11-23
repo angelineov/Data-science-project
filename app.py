@@ -25,16 +25,12 @@ import dash_table
 import dash_bootstrap_components as dbc
 
 from io import BytesIO
-from sklearn.manifold import TSNE
 
 import pandas as pd
 from wordcloud import WordCloud
 import base64
 import plotly.express as px
 import collections
-
-
-#import plotly.graph_objects as go
 
 
 # bootstrap theme
@@ -90,19 +86,12 @@ app.layout = html.Div([
             dbc.Col(html.H1("Market Analysis"), className="mb-2")
         ]),
         dbc.Row([
-            dbc.Col(html.H6(children='Visualizing the highlights and similarities between conferences, industries, or companies in the market'), className="mb-4")
+            dbc.Col(html.H6(children='Visualizing the highlights of conferences, industries, or companies in the market'), className="mb-4")
+
         ]),
-        #Companies Similarities Scatter Plot
-        dbc.Row([
-            dbc.Col(dbc.Card(html.H4(children='Companies Similarities Scatter Plot',
-                                     className="text-center text-light bg-dark"), body=True, color="dark")
-                    , className="mb-4")
-        ]),
-        
-    dbc.Row( dcc.Graph(id='vectorization1', figure=figvec1)),
     
     dbc.Row(html.Br()),
-
+    
     #Highlighted Topics in Conferences
     
     dbc.Row([
@@ -266,6 +255,7 @@ def highlightedTopic(text):
         title_text="Highlighted Keywords",
         showlegend=False,)
     return container, fig
+
 
 
 server = app.server
