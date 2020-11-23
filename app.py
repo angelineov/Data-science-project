@@ -73,7 +73,7 @@ app.layout = html.Div([
             dbc.Col(html.H1("Market Analysis"), className="mb-2")
         ]),
         dbc.Row([
-            dbc.Col(html.H6(children='Visualizing the highlights and similarities between conferences or industries in the market'), className="mb-4")
+            dbc.Col(html.H6(children='Visualizing the highlights and similarities between companies, conferences or industries in the market'), className="mb-4")
         ]),
 
         dbc.Row([
