@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Created on Mon Nov 23 08:44:03 2020
+
+@author: angelinejayanegara
+"""
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
 Created on Wed Oct 28 10:43:02 2020
 
 @author: angelinejayanegara
@@ -25,7 +32,7 @@ from wordcloud import WordCloud
 import base64
 import plotly.express as px
 import collections
-import networkx as nx
+
 
 #import plotly.graph_objects as go
 
@@ -39,8 +46,6 @@ print("Loading")
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.title = "Market Analysis - Data Science Project"
-
-server = app.server
 
 #all data
 raw = pd.read_csv('ALL_DATA.csv', encoding='Latin-1')
@@ -97,33 +102,7 @@ app.layout = html.Div([
     dbc.Row( dcc.Graph(id='vectorization1', figure=figvec1)),
     
     dbc.Row(html.Br()),
-    
-    #Companies Similarities Network Graph
-    dbc.Row(dbc.Col(html.Br())),
-    
-    dbc.Row([
-            dbc.Col(dbc.Card(html.H4(children='Companies Similarities Network Graph',
-                                     className="text-center text-light bg-dark"), body=True, color="dark")
-                    , className="mt-4 mb-5")
-    ]),
-    
-    dbc.Row([
-            dbc.Col(html.H6(id='output_container0', children=[]), className="mb-4")
-        ]),
-    
-    #Search input
-    dcc.Input(
-            id='searchinput0',
-            type="text",
-            placeholder="write a company name here",
-            value='Amazon',
-            style={'width': '48%', 'margin-left':'5px'}
-            ),
-    
-    dcc.Graph(id='companies_graph0',figure={}),
-    
-    dbc.Row(dbc.Col(html.Br())),
-    
+
     #Highlighted Topics in Conferences
     
     dbc.Row([
@@ -288,61 +267,8 @@ def highlightedTopic(text):
         showlegend=False,)
     return container, fig
 
-@app.callback(
-    [Output(component_id='output_container0' , component_property='children'),
-     Output(component_id='companies_graph0' , component_property='figure')],
-    Input(component_id='searchinput0', component_property='value'))
 
-def CompSim_2(name):
-    
-    container = "The company chosen by user is: {}".format(name)
-    
-    distanceMatrix = dm.values
-    LP = list(vec.Inc.unique())
-    index = LP.index(name)  
-    sortingL = []
-    for i in range(0,280):
-        sortingL.append((distanceMatrix[index][i],LP[i],i))
-    res1 = sorted(sortingL,key=lambda x: x[0],reverse=False)[:9]
-    res2 = [i[2] for i in res1]
-    compName = [i[1] for i in res1]
-    resMatrix = np.zeros((len(res2), len(res2)))
-    for i in range(0,len(res2)):
-        for j in range(0,len(res2)):
-            resMatrix[i][j] = distanceMatrix[res2[i]][res2[j]]
-    forComp = pd.DataFrame(resMatrix,compName,compName)
-    
-    #plotting
-    dist_df = forComp
-    G = nx.Graph()
-    for i, row_i in dist_df.iterrows():
-        for j, row_j in dist_df.iterrows():
-            G.add_edge(i,j,weight=dist_df.loc[i][j]*2)
-            
-    pos = nx.kamada_kawai_layout(G)
-    edge_trace = go.Scatter(x=[],y=[],line={'width':0.5,'color':'#888'},hoverinfo='none',mode='lines')
-    for edge in G.edges():
-        x0,y0=pos.get(edge[0])
-        x1,y1=pos.get(edge[1])
-        edge_trace['x']+=tuple([x0,x1])
-        edge_trace['y']+=tuple([y0,y1])
-
-    node_trace = go.Scatter(x=[], y=[], text=[], mode='markers', hoverinfo='text') 
-    for node in G.nodes():
-        x, y=pos.get(node)
-        node_trace['x']+=tuple([x])
-        node_trace['y']+=tuple([y])
-    node_trace.text = compName
-
-        #    return{"data":[edge_trace, node_trace],
-    fig= go.Figure(data=[edge_trace, node_trace])
-
-    fig.update_layout(width=800, height=800, showlegend=False, hovermode='closest',
-                      margin={'b': 20, 'l': 5, 'r': 5, 't': 40},
-                      xaxis={'showgrid': False, 'zeroline': False, 'showticklabels': False},
-                      yaxis={'showgrid': False, 'zeroline': False, 'showticklabels': False})
-    
-    return container, fig
+server = app.server
 
 if __name__ == '__main__':
     app.run_server(host='127.0.0.1', debug=False)
