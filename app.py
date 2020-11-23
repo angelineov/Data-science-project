@@ -25,12 +25,16 @@ import dash_table
 import dash_bootstrap_components as dbc
 
 from io import BytesIO
+from sklearn.manifold import TSNE
 
 import pandas as pd
 from wordcloud import WordCloud
 import base64
 import plotly.express as px
 import collections
+import networkx as nx
+
+#import plotly.graph_objects as go
 
 
 # bootstrap theme
@@ -64,21 +68,6 @@ dfin2 = pd.read_csv("engineeringTransportation.csv")
 dfin3 = pd.read_csv("healthcare.csv")
 dfin4 = pd.read_csv("highereducation.csv")
 dfin5 = pd.read_csv("software.csv")
-
-#Vectorizations data
-vec = pd.read_csv('vectors_inc.csv', encoding="utf-8-sig") 
-model = pd.read_csv('vecdf.csv', encoding="utf-8-sig")
-
-tsne = TSNE(random_state=1991,n_iter=1500,metric='cosine',n_components=2)
-
-embd_tr = tsne.fit_transform(model)
-
-figvec = px.scatter(x=embd_tr[:,0], y=embd_tr[:,1], color=vec['Inc'].values, hover_data= [vec['Inc']], width=1100, height=700)
-figvec1 = figvec.update_traces(showlegend=False)
-
-#Distance Matrix
-dm = pd.read_csv("companyDis.csv")
-cn = pd.read_csv("CompName.csv")
 
 app.layout = html.Div([
     dbc.Container([
@@ -255,6 +244,7 @@ def highlightedTopic(text):
         title_text="Highlighted Keywords",
         showlegend=False,)
     return container, fig
+
 
 server = app.server
 
