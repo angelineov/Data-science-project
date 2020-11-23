@@ -256,8 +256,6 @@ def highlightedTopic(text):
         showlegend=False,)
     return container, fig
 
-
-
 server = app.server
 
 if __name__ == '__main__':
