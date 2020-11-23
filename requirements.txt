@@ -8,7 +8,6 @@ dash-renderer
 dash-table
 scikit-learn
 scipy
-networkx
 numpy
 pandas
 gunicorn
