@@ -77,7 +77,7 @@ app.layout = html.Div([
         ]),
 
         dbc.Row([
-            dbc.Col(dbc.Card(html.H4(children='Companies Clustering and Conferences Similarities',
+            dbc.Col(dbc.Card(html.H4(children='Companies Similarities',
                                      className="text-center text-light bg-dark"), body=True, color="dark")
                     , className="mb-4")
         ]),
