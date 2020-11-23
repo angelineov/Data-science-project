@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 23 08:44:03 2020
+Created on Mon Nov 23 10:14:26 2020
 
 @author: angelinejayanegara
 """
@@ -25,14 +25,12 @@ import dash_table
 import dash_bootstrap_components as dbc
 
 from io import BytesIO
-from sklearn.manifold import TSNE
 
 import pandas as pd
 from wordcloud import WordCloud
 import base64
 import plotly.express as px
 import collections
-import networkx as nx
 
 #import plotly.graph_objects as go
 
@@ -69,25 +67,32 @@ dfin3 = pd.read_csv("healthcare.csv")
 dfin4 = pd.read_csv("highereducation.csv")
 dfin5 = pd.read_csv("software.csv")
 
+#All companies data
+dfc1 = pd.read_csv("amazon.csv")
+dfc2 = pd.read_csv("Google.csv")
+dfc3 = pd.read_csv("IBM.csv")
+dfc4 = pd.read_csv("Microsoft.csv")
+dfc5 = pd.read_csv("NVIDIA.csv")
+dfc6 = pd.read_csv("Oracle.csv")
+
+
 app.layout = html.Div([
     dbc.Container([
         dbc.Row([
             dbc.Col(html.H1("Market Analysis"), className="mb-2")
         ]),
         dbc.Row([
-            dbc.Col(html.H6(children='Visualizing the highlights of conferences, industries, or companies in the market'), className="mb-4")
-
+            dbc.Col(html.H6(children='Visualizing the highlights and similarities between conferences, industries, or companies in the market'), className="mb-4")
         ]),
-    
-    dbc.Row(html.Br()),
-    
-    #Highlighted Topics in Conferences
-    
-    dbc.Row([
+        #Companies Similarities Scatter Plot
+        dbc.Row([
             dbc.Col(dbc.Card(html.H4(children='Highlighted Topics in Conferences',
                                      className="text-center text-light bg-dark"), body=True, color="dark")
-                    , className="mt-4 mb-5")
-    ]),
+                    , className="mb-4")
+        ]),
+
+    
+    dbc.Row(html.Br()),
     
     dbc.Row([
             dbc.Col(html.H6(id='output_container', children=[]), className="mb-4")
@@ -135,8 +140,6 @@ app.layout = html.Div([
         value='aerospaceLab',
         style={'width': '48%', 'margin-left':'5px'}
         ),
-    
-    dcc.Graph(id='topics_graph',figure=figvec),
     
     #Companies Highlights
     dbc.Row(dbc.Col(html.Br())),
@@ -245,8 +248,8 @@ def highlightedTopic(text):
         showlegend=False,)
     return container, fig
 
-
 server = app.server
+
 
 if __name__ == '__main__':
     app.run_server(host='127.0.0.1', debug=False)
