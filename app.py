@@ -1,13 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 23 10:14:26 2020
-
-@author: angelinejayanegara
-"""
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
 Created on Wed Oct 28 10:43:02 2020
 
 @author: angelinejayanegara
@@ -31,7 +24,6 @@ from wordcloud import WordCloud
 import base64
 import plotly.express as px
 import collections
-
 #import plotly.graph_objects as go
 
 
@@ -75,24 +67,32 @@ dfc4 = pd.read_csv("Microsoft.csv")
 dfc5 = pd.read_csv("NVIDIA.csv")
 dfc6 = pd.read_csv("Oracle.csv")
 
-
 app.layout = html.Div([
     dbc.Container([
         dbc.Row([
             dbc.Col(html.H1("Market Analysis"), className="mb-2")
         ]),
         dbc.Row([
-            dbc.Col(html.H6(children='Visualizing the highlights and similarities between conferences, industries, or companies in the market'), className="mb-4")
+            dbc.Col(html.H6(children='Visualizing the highlights and similarities between conferences or industries in the market'), className="mb-4")
         ]),
-        #Companies Similarities Scatter Plot
+
         dbc.Row([
-            dbc.Col(dbc.Card(html.H4(children='Highlighted Topics in Conferences',
+            dbc.Col(dbc.Card(html.H4(children='Companies Clustering and Conferences Similarities',
                                      className="text-center text-light bg-dark"), body=True, color="dark")
                     , className="mb-4")
         ]),
-
-    
+        
+    dbc.Row(
+                    [
+                        dbc.Col(html.Img(src="/assets/plot.png"))
+                    ]),
     dbc.Row(html.Br()),
+    
+    dbc.Row([
+            dbc.Col(dbc.Card(html.H4(children='Highlighted Topics in Conferences',
+                                     className="text-center text-light bg-dark"), body=True, color="dark")
+                    , className="mt-4 mb-5")
+    ]),
     
     dbc.Row([
             dbc.Col(html.H6(id='output_container', children=[]), className="mb-4")
@@ -105,7 +105,7 @@ app.layout = html.Div([
             {'label': 'GTC',            'value': 'GTC'},
             {'label': 'Big Data 2019',  'value': 'Big Data 2019'},
             {'label': 'Big Data 2020',  'value': 'Big Data 2020'},
-            {'label': 'Digital Work',   'value': 'Digwork'},
+            {'label': 'Digital Work',        'value': 'Digwork'},
             {'label': 'Oracle',         'value': 'Oracle'}
         ],
         value='All',
@@ -114,8 +114,6 @@ app.layout = html.Div([
     
 
     dcc.Graph(id='conference_graph',figure={}),
-    
-    #Highlighted Topics in Industries according to NVIDIA GTC conference
 
     dbc.Row([
             dbc.Col(dbc.Card(html.H4(children='Highlighted Topics in Industries according to NVIDIA GTC conference',
@@ -141,7 +139,9 @@ app.layout = html.Div([
         style={'width': '48%', 'margin-left':'5px'}
         ),
     
-    #Companies Highlights
+    dcc.Graph(id='topics_graph',figure={}),
+    
+    #companies highlights
     dbc.Row(dbc.Col(html.Br())),
     
     dbc.Row([
@@ -228,8 +228,8 @@ def update_graph(option_slctd):
 def highlightedTopic(text):
     
     container = "The company chosen by user is: {}".format(text)
-
    
+    
     filter = alldata[alldata['Inc'] == text]
     train = list(filter.Keywords)
     t = [item.split(',') for item in train]
@@ -249,7 +249,6 @@ def highlightedTopic(text):
     return container, fig
 
 server = app.server
-
 
 if __name__ == '__main__':
     app.run_server(host='127.0.0.1', debug=False)
