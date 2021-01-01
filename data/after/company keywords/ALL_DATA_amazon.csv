@@ -1,0 +1,6 @@
+Conference,Inc,Title,Length,Keywords,Entity,Singleton
+NVIDIA GTC 2020,Amazon,From Hours to Minutes: The Journey of Optimizing Mask-RCNN and BERT Using MXNet [S22483],46,"Deep learning,System resource","BERT,MXNet,Amazon Web Services",
+NVIDIA GTC 2020,Amazon,Improve ML Training Performance with Amazon SageMaker Debugger (Presented by Amazon Web Services) [S22493],104,"JTAG,Learning,ML,ML.NET,Parameter","Amazon,GPU","analyze,developer,challenging,ensure"
+NVIDIA GTC 2020,Amazon,Recommendation Systems Using Distributed Graph Convolutional Networks (GCN) on GPUs (Presented by Amazon Web Services) [S22491],83,"Deep learning,Ha-ha,Non-Euclidean geometry","Graph Convolutional Networks,Deep Graph Library,Apache MXNet","simple,image,sequence,timeseries,language,information"
+NVIDIA GTC 2020,Amazon,Dive into Deep Learning [T22537],134,"Deep learning,Perceptron","CNN,Python","material,theory,cnn,transforming"
+NVIDIA GTC 2020,Amazon,Terrain Traversability Estimation using Normal Distribution Transform on GPU in Amazon Scout [S21179],127,"Gaussian surface,Induction hardening,Nondestructive testing","Amazon,3D NDT,NVIDIA,NDT,Amazon Scout","scout,autonomous,navigate,safely,amazon,robot"

@@ -1,0 +1,39 @@
+Conference,Inc,Title,Length,Keywords,Entity,Singleton
+Big Data 2020,Redis Labs,Redis: a Multi-Model DB for IoT and Beyond,72,"Integrated development environment,Man-Thing,NoSQL,Open-source software","Redis,Big Data,JSON","redis,foundation,discussed"
+Big Data 2020,ODPi Egeria & IBM,Graph Processing for Open Metadata and Governance,78,Distributed computing,"Egeria,JanusGraph","technology,enterprise,service"
+Big Data 2020,IT Architect Specializing in Data Analytics and Cloud Computing,Data Governance From an Engineering Perspective,36,E-governance,,"nothing,fence,sure,like"
+Big Data 2020,Cloudera,Introduction to FLaNK Stack,44,"Apache Kafka,Apache Kudu,Apache License,Apache NiFi","Apache Flink,Apache Kafka,IoT, AI","application,iot,introducing"
+Big Data 2020,Elastic,Best Practices for Building Streaming Data Architectures,85,The Arthur Pequegnat Clock Company,,"architecture,style,theory,struggle,transforming,characteristic,something"
+Big Data 2020,Confluent,Kafka as a Platform: the Ecosystem from the Ground Up,176,"IT infrastructure,Mixer (service),Public key infrastructure","Confluent,Big Data","message,consumer,apis,messaging"
+Big Data 2020,Phoensight,In the Shallow with AI,111,"Artificial intelligence,Elicitation,Human intelligence",,"integrate,society,recognised,humansintheloop,focused"
+Big Data 2020,ServiceNow,5 Pillars of User-Centric Analytics,107,"Analytics,Big data",,"company,decisionmaking"
+Big Data 2020,Code4Thought,Data Versioning What Does it Mean?,178,"Free and open-source software,Object storage,Open source,Software versioning","DoltHub,Update,ACID","manage,solution,pipeline,growing,git"
+Big Data 2020,Schibsted,Predicting Cryptocurrency Exchange Rates with Stream Processing Social Data and Online Learning,45,Systems design,,"designing,seems,presenter,pitfall,billion,cope,talk,harder,load"
+Big Data 2020,Microsoft,Azure Synapse Analytics Overview,105,"Linktree,Microsoft Azure","Synapse Analytics,Big Data,Azure Synapse Analytics","brings,together"
+Big Data 2020,Starburstdata,Interactive BI Analytics with Presto,159,"Data source,Isolation (database systems),Open source,Presto (SQL query engine),Use case","SQL,Airbnb, Facebook,LinkedIn, Lyft, Netflix, Twitter,Presto,Object Stores,HDFS,RDBMS,BI,Elasticsearch,Lukasz,Karol",presto
+Big Data 2020,Spot Intelligence,Designing and Building Data Science Solutions,88,"Business-to-business,Customer success,Data science,Data type",,"ability,impactful,daunting"
+Big Data 2020,SHI GmbH,Adding AI Cloud Services to Your On-Prem Data Workflows for NLP & Content Enrichment,177,"Cloud computing,Data source,Machine learning",Daniel,"challenge,pipeline,onpremise,enriching,processing,training"
+Big Data 2020,RavenPack,From the Earth to the Moon: Lessons from the Space Race to Apply in Machine Learning Projects,82,"Space Race,Space technology,United States Space Force","EEUU,Soviet Union","eeuu,conquer,incredible"
+Big Data 2020,ByTek,Analyzing Public Data About User Queries on Search Engine to Predict Trends and Evaluate Markets,66,"Interest,Kiuwan,List of search engines,Static program analysis",NLP,"analyze,keywords,query"
+Big Data 2020,TechGDPR,The GDPR Challenges to Big Data and How to Overcome Them,84,"Data analysis,Data exchange,Market data,Personal data,Radical Change,Silvan Shalom",GDPR,used
+Big Data 2020,Hazelcast,Real-Time Streaming with Python ML Inference,160,"Collaboration tool,Data science,Machine learning","Python,Java","python,capability,making"
+Big Data 2020,Datatonic,ML in Production - Serverless and Painless,177,"Automated machine learning,Case study,Data mining,Data science,ML,Machine learning","Oliver,Tensorflow,Google Cloud Platform","become,mobile,daunting"
+Big Data 2020,GRADIANT,Advanced Analytics in the Industry,89,"Artificial intelligence,Cross-industry standard process for data mining,Information industry,List of artificial intelligence projects","Congress,IbermÃ¡tica,OEE,Phenobyte","experience,description,gradiant,realtime"
+Big Data 2020,Human Technologies,Ethical Side of Booming AI,68,"Expect,Morality",,"deliver,future,humany,technology,humanfaced"
+Big Data 2020,REEA,Supercharge your Data Analytics with BigQuery ML,162,"Google Cloud Platform,Machine learning,Query letter","BigQuery ML,SQL,TensorFlow,BigQuery Models,BigQuery","database,language"
+Big Data 2020,PREVINET,Real-Time Stream Processing for Insurance & Health Care With Kafka Kafka Streams and Multi-Runtime Microservices,197,Principal component analysis,mongo,"microservices,used,processing,scala,heavily,resilient,different,developed,usually,based,akka,storage"
+Big Data 2020,Hazelcast,Introduction to Data Streaming,224,"Batch processing,Stream processing,Streaming data","Switzerland,OpenData,Hazelcast","possible,software,eating,able,emerge,faithfully"
+Big Data 2020,Monte Carlo,Making Data Downtime a Pillar of Your Data Strategy,63,Principal component analysis,Barr,"barr,introduce"
+Big Data 2020,Code4Thought,Trust and Quality in the Era of Software 2.0,178,"ML,ML.NET,Machine learning,Quality","Accuracy,F.A.T.,Fairness,Transparency","deliver,transparency,yiannis,potential"
+Big Data 2020,ThinkCol,Towards Enterprise-Grade Data Discovery at ING with Apache Atlas and Amundsen,72,"Case study,Practical Magic","AI,Kane,Hong Kong","company,discus,experience,discussing,create"
+Big Data 2020,ING Bank,Machine Learning Engineering,126,"Big data,Data mining,Data science,Democratization,Dublin Oldschool,Implementation,System context diagram","ETL,Verdan,Apache Atlas,Lyft,Linux Foundation,Big Data,ING","prerequisite,transforming"
+Big Data 2020,paf,The Importance of Good Data Quality and Understanding of Visitor Behavior,73,"Data quality,Machine learning",Facebook,"customer,measure,becoming,facebook,google"
+Big Data 2020,Hawk:AI,Exoplanet Detection Using Machine Learning,260,Machine learning,"algorithm,classifier,Kepler,AUC,Nasa,Transiting Exoplanet Survey Satellite,TESS","lightcurves,feature,used,able,based,technique,using,conventional,lightcurve,recall"
+Big Data 2020,Aizonic,Streaming Processing - an Overview of the Concepts Architecture and Technology of Doing Data Science on Real-Time Data,168,"Financial services,Services marketing,Stream processing","Bas,IoT","architecture,solution,becoming,healthcare"
+Big Data 2020,Intellisystem Technologies,Covid-19: Big Data Analytics and Artificial Intelligence,94,"Economic impact analysis,Francis II of France,Health care",,range
+Big Data 2020,Credit Sesame,The Intuition Behind the Use of M.L. in Marketing Analytics,220,"Computer vision,Predictive modelling","Artificial Intelligence (AI,Cross","technology,advance"
+Big Data 2020,iunera GmbH & Co. KG,Stopping Public Transport Coronavirus Infections with Big Data,49,"Big data,Infection,Public transport","Coronavirus,Big Data",infected
+Big Data 2020,Fundbox,Orchestrating Data Workflows Using a Fully Serverless Architecture,158,Docker (software),"Fundbox,AWS StepFunctions,Tomer,BI","fundbox,resource,company,scheduling,dependency,engineering,architecture,tomer,scalable,overcome"
+Big Data 2020,Hybrid Theory,Big Data Architecture in the Advertising Industry,65,"Data science,Engineer",Apache Airflow,
+Big Data 2020,Digital Fingerprints,From Internet Access Devices Usage to Behavioural Model,131,"Sony ILCE camera,Tablet computer",,"feature,important,information,gathered,device,transferred"
+Big Data 2020,"AI Product Institute, Silicon Valley",Product Management Principles to Drive Businesses in the AI Era,135,"Business domain,Corporate sustainable profitability,Try, Try, Try","Amazon,Google",

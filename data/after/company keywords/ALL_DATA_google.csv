@@ -1,0 +1,5 @@
+Conference,Inc,Title,Length,Keywords,Entity,Singleton
+NVIDIA GTC 2020,Google,Google Cloud AutoML Video and Edge Deployment [S22022],103,"Google Cloud Platform,List of Nvidia graphics processing units","Google,Video Classification,Tensorflow,Jetson",
+NVIDIA GTC 2020,Google,GPipe: Efficient Training of Giant Neural Networks Using Pipeline Parallelism [S21873],129,"Convolutional neural network,Deep learning,Software quality",GPipe,"scaling,different,accelerator,gpipe,parallelism,pipelining"
+NVIDIA GTC 2020,Google,Insight-Driven Machine Learning Design with Human Expert Collaborations [S21636],151,"Deep learning,Machine learning",,"resulting,enabled,potential"
+Digital Work 2020,Google,From Nesting to Neighborhoods: Minimize Spatial Scarcity and Improve Collaboration (*All Times EDT),70,"Datadog,Spatial memory",Google,"people,significant"
