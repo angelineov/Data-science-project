@@ -30,7 +30,19 @@ As the result, from 400 business and technology articles from 5 conferences the 
 ### To fully examine the project, please visit the [Final report](https://docs.google.com/document/d/1ZlW0jN_-YeFXaHFqtsxEePpSCyPvxBmePFNQE8Lc78A/edit?usp=sharing), that includes overall process, code highlights and results visualizations. Due to the time boundaries, the Heroku version of the website is incomplete, however, the missing results and visualization are available below and also in the Final report. Website is available from this [link](https://market-highlights.herokuapp.com/). 
 
 ### Results
+#### Companies reoresentation interactive scatterplot 
 #### ![Companies representation interactive scatterplot](https://j.gifs.com/yoqwYw.gif)
+
+#### Company similarity graph by description distance measure
+#### ![Company similarity graph by description measure](https://j.gifs.com/r8j2Ak.gif)
+
+#### Company similarity graph by keyword distacnce measure
+#### ![Company similarity graph by keyword distacnce measure](https://j.gifs.com/mO1qvE.gif)
+
+#### The remaining results are available on the website. [Try it out!](https://market-highlights.herokuapp.com/)
+#### Website demo
+#### ![Website demo](https://j.gifs.com/Gv1R3r.gif)
+
 
 
 
