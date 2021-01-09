@@ -5,6 +5,9 @@ It is essential for Futurice as a consulting company to understand the market si
 
 Therefore, our motivation for the project was to gain an understanding of the market/industries, and then transform it into essential knowledge about all of those companies so that the project could benefit Futurice in their research work.
 
+
+As the result, from 400 business and technology articles from 5 conferences the team gained impactful knowledge about current situation in the market. The knowledge, in turn, is visualized in various graphs, plots, and interactive barcharts.
+
 ## Team 
 [**Nghiem Le Long**](www.linkedin.com/in/le-long-nghiem/) - Data gathering, Machine Learning, Visualizations
 
@@ -20,3 +23,6 @@ Therefore, our motivation for the project was to gain an understanding of the ma
 #### [Web-scraping](https://github.com/angelineov/Data-science-project/tree/master/Webscraping)
 #### [Machine Learning](https://github.com/angelineov/Data-science-project/tree/master/Machine%20Learning)
 #### [Website](https://github.com/angelineov/Data-science-project/tree/master/Website)
+
+
+
