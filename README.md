@@ -18,14 +18,6 @@ Therefore, our motivation for the project was to gain an understanding of the ma
 
 As the result, from 400 business and technology articles from 5 conferences the team gained impactful knowledge about current situation in the market. The knowledge, in turn, is visualized in various graphs, plots, and interactive barcharts.
 
-## Team 
-[**Nghiem Le Long**](www.linkedin.com/in/le-long-nghiem/) - Data gathering, Machine Learning, Visualizations
-
-
-[**Huy Thanh Nguyen**]( www.linkedin.com/in/huy-nguyen-thanh) - Machine Learning, Visualizations
-
-
-[**Angeline Jayanegara**](www.linkedin.com/in/angelinejayanegara/) - Web-development, Visualizations
 
 ### To fully examine the project, please visit the [Final report](https://docs.google.com/document/d/1ZlW0jN_-YeFXaHFqtsxEePpSCyPvxBmePFNQE8Lc78A/edit?usp=sharing), that includes overall process, code highlights and results visualizations. Due to the time boundaries, the Heroku version of the website is incomplete, however, the missing results and visualization are available below and also in the Final report. Website is available from this [link](https://market-highlights.herokuapp.com/). 
 
@@ -36,8 +28,8 @@ As the result, from 400 business and technology articles from 5 conferences the 
 #### Company similarity graph by description distance measure
 #### ![Company similarity graph by description measure](https://j.gifs.com/r8j2Ak.gif)
 
-#### Company similarity graph by keyword distacnce measure
-#### ![Company similarity graph by keyword distacnce measure](https://j.gifs.com/mO1qvE.gif)
+#### Company similarity graph by keyword distance measure
+#### ![Company similarity graph by keyword distance measure](https://j.gifs.com/mO1qvE.gif)
 
 #### The remaining results are available on the website. [Try it out!](https://market-highlights.herokuapp.com/)
 #### Website demo
