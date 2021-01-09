@@ -7,12 +7,16 @@ Therefore, our motivation for the project was to gain an understanding of the ma
 
 ## Team 
 Nghiem Le Long - Data gathering, Machine Learning, Visualizations
+
+
 Huy Thanh Nguyen - Machine Learning, Visualizations
+
+
 Angeline Jayanegara - Web-development, Visualizations
 
-## To fully examine the project, please visit the [Final report](https://docs.google.com/document/d/1ZlW0jN_-YeFXaHFqtsxEePpSCyPvxBmePFNQE8Lc78A/edit?usp=sharing), that includes overall process, code highlights and results visualizations. 
+### To fully examine the project, please visit the [Final report](https://docs.google.com/document/d/1ZlW0jN_-YeFXaHFqtsxEePpSCyPvxBmePFNQE8Lc78A/edit?usp=sharing), that includes overall process, code highlights and results visualizations. 
 
-## Source code
-### [Web-scraping]()
-### [Machine Learning]()
-### [Website](../Website)
+#### Source code
+#### [Web-scraping]()
+#### [Machine Learning]()
+#### [Website](https://github.com/angelineov/Data-science-project/tree/master/Website)
