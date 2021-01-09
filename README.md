@@ -29,7 +29,7 @@ As the result, from 400 business and technology articles from 5 conferences the 
 #### ![Company similarity graph by description measure](https://j.gifs.com/r8j2Ak.gif)
 
 #### Company similarity graph by keyword distance measure
-#### ![Company similarity graph by keyword distance measure](https://j.gifs.com/5QB7Nq.gif)
+#### ![Company similarity graph by keyword distance measure](https://j.gifs.com/xnp6Jz.gif)
 
 #### The remaining results are available on the website. [Try it out!](https://market-highlights.herokuapp.com/)
 #### Website demo
