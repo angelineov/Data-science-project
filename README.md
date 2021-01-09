@@ -1,4 +1,4 @@
-# Data-science-project
+# Market analysis
 ## Team 
 [**Nghiem Le Long**](www.linkedin.com/in/le-long-nghiem/) - Data gathering, Machine Learning, Visualizations
 
