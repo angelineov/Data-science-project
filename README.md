@@ -31,7 +31,7 @@ As the result, from 400 business and technology articles from 5 conferences the 
 #### Companies Similarities graph by keyword distance measure
 #### ![Company similarity graph by keyword distance measure](https://j.gifs.com/xnp6Jz.gif)
 
-#### The remaining results are available on the website. [Try it out!](https://market-highlights.herokuapp.com/)
+#### The remaining results are available on the website. The highlights are mostly available with dropdown choices, except Highlighted topics of company, that is with a search bar (more than 200 companies could be put as an input). [Try it out!](https://market-highlights.herokuapp.com/)
 #### Website demo
 #### ![Website demo](https://j.gifs.com/Gv1R3r.gif)
 
